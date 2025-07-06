@@ -1,10 +1,11 @@
 const input = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
+const toggleBtn = document.getElementById("toggleDark");
+const body = document.body;
 
 addBtn.addEventListener("click", () => {
   const taskText = input.value.trim();
-
   if (taskText === "") {
     alert("Please write something!");
     return;
@@ -20,15 +21,16 @@ addBtn.addEventListener("click", () => {
   const deleteBtn = document.createElement("span");
   deleteBtn.textContent = " ❌";
   deleteBtn.classList.add("delete-btn");
-
   deleteBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     li.remove();
   });
 
   li.appendChild(deleteBtn);
-
   taskList.appendChild(li);
-
   input.value = "";
+});
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
 });
