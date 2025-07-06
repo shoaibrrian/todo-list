@@ -11,7 +11,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px #ccc;
-  width: 300px;
+  width: 500px;
 }
 
 h1 {
@@ -19,7 +19,7 @@ h1 {
 }
 
 input {
-  width: 94%;
+  width: 96%;
   padding: 8px;
   margin-bottom: 10px;
 }
@@ -48,4 +48,17 @@ li {
   padding: 8px;
   margin: 5px 0;
   border-radius: 5px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.7;
+}
+
+.delete-btn {
+  color: red;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
 }
